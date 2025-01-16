@@ -19,26 +19,37 @@ public class Main {
 
             System.out.println(" Task 3");
 
-            int year = 2021;
-            if (year > 1584) {
+            int year = 2024;
+            if (year < 1584) ;
+            {
                 System.out.println(" Год должен быть больше 1584");
-            } else if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-                System.out.println("year + год является високосным.");
-            } else {
-                System.out.println(" year + год не является високосным");
             }
-            System.out.println(" Task 4");
+            if (year % 400 == 0) {
+                System.out.println(year + " год является високосным");
+            } else if (year % 100 == 0) {
+                System.out.println(year + " год не является високосным ");
+            } else if (year % 4 == 0) {
+                System.out.println(year + " год является високосным");
+            } else {
+                System.out.println(year + " год не является високосным");
+                System.out.println(" Task 4");
+            }
+
+            int deliveryDistance = 95;
+            int days = 1;
+            if (deliveryDistance > 20) {
+                System.out.println("Потребуется дней" + days);
+            } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+                System.out.println("Потребуется дней" + (days + 1));
+            } else if (deliveryDistance >= 60 && deliveryDistance <= 100) ;
+            {
+                System.out.println("Потребуется дней " + (days + 2));
+
+            }
+            System.out.println("Доставки нет");
+
 
         }
-        int deliveryDistance = 95;
-        int mindelivery = 1;
-        if (deliveryDistance > 100) {
-            System.out.println("Нет доставки");
-            return;
-        } else if (deliveryDistance > 20 && deliveryDistance > 60) {
-            mindelivery++;
-        }
-        System.out.println("Доставка займет " + mindelivery + "суток");
 
 
         int monthNumber = 15;
